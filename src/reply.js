@@ -15,6 +15,9 @@ exports.handler = async function(event, context, callback) {
     ]
   }
 
+  console.log("=======Inspect data======")
+  console.log(data)
+
   const res = await axios.post('https://api.line.me/v2/bot/message/reply', data, {
     headers: {
       'Content-Type': 'application/json',
